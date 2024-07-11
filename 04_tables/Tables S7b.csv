@@ -1,0 +1,5 @@
+flood_cat,Any,< 25th percentile,25th percentile,50th percentile,75th percentile
+Heavy rain,5,3,4,5,7
+Tropical cyclone,6,3,5,7,13
+Snowmelt,10,3,7,14,23
+Ice jam or dam break,5,3,4,6,8

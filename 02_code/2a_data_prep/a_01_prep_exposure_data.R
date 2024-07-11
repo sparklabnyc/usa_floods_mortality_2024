@@ -13,6 +13,7 @@ gfd_data <- read_csv(paste0(exposure.data.folder, "gfd_county_panel.csv")) %>%
          dfo_ended = mdy(dfo_ended),
          year = year(dfo_began),
          month = month(dfo_began)) %>% 
+  filter(between(year, 2001, 2018)) |> 
   filter(!dfo_id %in% c(2380, 2198,2852,3298,3218,2717,3871,4197,3184,3199,3332)) #remove these flood events because they do not affect any county in US
 n_distinct(gfd_data$dfo_id) #
 
@@ -37,7 +38,8 @@ n_distinct(gfd_data$dfo_id) #
            Ended = mdy(Ended),
            year = year(Began),
            month = month(Began)) %>% 
-    dplyr::select(dfo_id, MainCause, category, Validation, year)
+    dplyr::select(dfo_id, MainCause, category, Validation, year) %>% 
+    filter(between(year, 2001, 2018))
   
   #2c.join all flood events
   flood_events <- bind_rows(flood_events_part1, flood_events_part2)

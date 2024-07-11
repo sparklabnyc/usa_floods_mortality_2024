@@ -30,7 +30,7 @@ count_by_flood_type <- flood_data_with_pop %>%
   dplyr::select(dfo_id, flood_cat) %>% distinct() %>% 
   group_by(flood_cat) %>% tally() %>% 
   mutate(perc_floods = n/sum(n))
-  #count_by_flood_type %>% write_csv(paste0(tables.folder, "Table S5.csv"))
+  count_by_flood_type %>% write_csv(paste0(tables.folder, "Table S5.csv"))
 
 
 #3a.Count of floods by county (geoid)

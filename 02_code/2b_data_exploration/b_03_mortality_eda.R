@@ -52,7 +52,7 @@ basic_season_data$month <- factor(basic_season_data$month, levels = c(1,2,3,4,5,
 basic_season_data$cause <- factor(basic_season_data$cause, levels = c("Injuries", "Cardiovascular diseases","Respiratory diseases",
                                                                       "Cancers", "Infectious and parasitic diseases", "Neuropsychiatric conditions"))
 
-#basic_season_data %>% write_csv(paste0(output.folder, "mort_data_by_season.csv"))
+basic_season_data %>% write_csv(paste0(output.folder, "mort_data_by_season.csv"))
 
 basic_season_data <- 
   read_csv(paste0(output.folder, "mort_data_by_season.csv"))

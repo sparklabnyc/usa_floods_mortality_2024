@@ -27,7 +27,7 @@ n_distinct(gfd_data$dfo_id) #
          year = year(Began),
          month = month(Began)) %>% 
     dplyr::select(dfo_id, MainCause, category, Validation, year) %>% 
-    filter(between(year, 2001, 2021))
+    filter(between(year, 2001, 2018))
   
   #2b.identify flood events incorrectly labeled as occurring outside of US (Mexico, Canada, Haiti, Jamaica) that actually affect US counties
   flood_events_part2 <- read_csv(paste0(exposure.data.folder, "FloodArchive.csv")) %>% 
@@ -55,7 +55,7 @@ mutate(flood_cat = case_when(is.na(category) ~ 'none',
                              category == "Dam failure" ~ "Ice jam or dam break", 
 ))
   add_flood_type %>% 
-    write_csv(paste0(exposure.data.folder, "gfd_with_flood_type_new.csv"))
+    write_csv(paste0(exposure.data.folder, "gfd_with_flood_type.csv"))
   
 #4.Identify floods in DFO dataset but NOT in GFD
 floods_not_in_gfd <- anti_join(flood_events_part1, gfd_data) 

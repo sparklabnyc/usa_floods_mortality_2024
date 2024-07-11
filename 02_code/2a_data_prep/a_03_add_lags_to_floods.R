@@ -17,7 +17,7 @@ expo_types <- c("pop_expo")
 expo_thresholds <- c("any", "1_pert","25_pert", "50_pert", "75_pert")
 
 #1c.Generate dataset of all possible fips, year, month combinations 
-year <- c(2001:2021)
+year <- c(2001:2018)
 month <- c(1:12)
 fips <- c(unique(flood_data$fips))
 flood_lag_grid <- expand_grid(year, month, fips)

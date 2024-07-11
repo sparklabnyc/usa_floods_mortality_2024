@@ -6,7 +6,7 @@ source(paste0(project.folder,'create_folder_structure.R'))
 source(paste0(functions.folder,'script_initiate.R'))
 
 #0b.Load datasets
-gfd_data <- read_csv(paste0(exposure.data.folder, "gfd_with_flood_type_new.csv")) %>%
+gfd_data <- read_csv(paste0(exposure.data.folder, "gfd_with_flood_type.csv")) %>%
   janitor::clean_names() %>%
   dplyr::select(c(geoid,dfo_began,dfo_id,flood_days_max,flood_days_mean,ghsl_pop2015,
                   ghsl_popexp2015,state,year,month,flood_cat)) %>% distinct() %>%

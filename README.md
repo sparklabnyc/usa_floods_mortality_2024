@@ -9,7 +9,7 @@ This dataset and code is used for the paper
 [[[Paper reference when published]]]
 
 ## 1. Data
-1a_exposure_data: flood data from Global Flood Database (in progress)
+1a_exposure_data: flood data from Global Flood Database 
 1b_outcome_data: mortality data - only on local computer 
 1c_supportive_datasets: files used to help analysis (e.g. population weights, fips-to-state etc.)
 

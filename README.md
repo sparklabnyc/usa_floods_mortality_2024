@@ -29,9 +29,9 @@ a_03_add_lags_to_floods: create lagged flood exposure variables
 ### 2b.Data exploration code
 b_00_compare_flood_datasets: identify flood events in DFO and NCEI that are not currently in GFD; no need to run unless specifically comparing flood datasets
 
-b_01_flood_event_eda: barplots and histograms to assess the number and duration of flood events by flood type 
+b_01_flood_event_eda: barplots and histograms to assess the number and duration of flood events by flood cause 
 
-b_02_flood_eda_maps: maps of flood count by county and by flood type (cyclonic storms, heavy rain, rain and snow, ice jams and dam breaks)
+b_02_flood_eda_maps: maps of flood count by county and by flood cause (cyclonic storms, heavy rain, rain and snow, ice jams and dam breaks)
 
 b_03_mortality_eda: code for mortality plots
 
@@ -44,10 +44,16 @@ c_00_create_subcause_group_datasets: creates separate .rds for each mortality ca
 
 c_01_model_comparison: compare models with different dfs, family options, hyper priors
 
-c_02_run_model: run model by mortality cause group, flood type, exposure threshold, and subgroup (age, sex)
+c_02_run_model: run model by mortality cause group, flood cause, exposure threshold, and subgroup (age, sex)
+
+c_03_run_all_cause_model: run model for all mortality causes together by flood cause
+
+c_04_DPM: calculate monthly deaths per million (DPM) attributable to flood exposure by flood cause, severity, and lag 
 
 ### 2d.Model plotting
 d_01_plot_model_output: plot results
+
+d_02_plot_model_all_cause: plot results for all mortality cause analysis 
 
 ### 20.Functions
 01_data_processing_functions: functions to process mortality data and create separate .rds for mortality causes and subgroups
@@ -63,7 +69,7 @@ d_01_plot_model_output: plot results
 script_initiate.R
 
 ## 3.Output
-3a_eda_output: all flood and mortality plots
+3a_eda_output: initial tables and figures 
 
 3b_model_output: .csv of model results 
 

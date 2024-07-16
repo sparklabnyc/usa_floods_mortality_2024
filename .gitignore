@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# mortality data
+01_data/1a_exposure_data/*
+01_data/1b_outcome_data/*
+01_data/1c_supportive_datasets/*
+03_output/3a_eda_output/*
+03_output/3b_model_output/*

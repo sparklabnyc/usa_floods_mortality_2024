@@ -1,12 +1,12 @@
 # Flooding and cause-specific mortality in the United States
 Victoria D Lynch, Johnathan Sullivan, Aaron Flores, Sarika Aggarwal, Rachel C Nethery, Marianthi-Anna Kioumourtzoglou, Anne E Nigra, Robbie M Parks
-[[[Journal]]] 202X
+Nature Medicine 2025
 
 ## Project description
 
 This dataset and code is used for the paper
 
-[[[Paper reference when published]]]
+https://www.nature.com/articles/s41591-024-03358-z
 
 ## 1. Data
 1a_exposure_data: flood data from Global Flood Database 

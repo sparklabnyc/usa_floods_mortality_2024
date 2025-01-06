@@ -1,6 +1,5 @@
 # Flooding and cause-specific mortality in the United States
-Victoria D Lynch, Johnathan Sullivan, Aaron Flores, Sarika Aggarwal, Rachel C Nethery, Marianthi-Anna Kioumourtzoglou, Anne E Nigra, Robbie M Parks
-Nature Medicine 2025
+Victoria D Lynch, Johnathan Sullivan, Aaron Flores, Sarika Aggarwal, Rachel C Nethery, Marianthi-Anna Kioumourtzoglou, Anne E Nigra, Robbie M Parks. Nature Medicine. 2025
 
 ## Project description
 

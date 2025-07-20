@@ -85,67 +85,59 @@ note: please run create_folder_structure.R first to create folders which may not
 ## Directory structure
 
 ```md
+.
 ├── 01_data
-│   ├── 1a_exposure_data
-│   │   ├── FloodArchive.csv
-│   │   ├── dfo_usa_county_panel_20220629.csv
-│   │   ├── floods_not_in_gfd.csv
-│   │   ├── gfd_county_panel.csv
-│   │   ├── gfd_usa_county_panel_20230224.csv
-│   │   ├── gfd_with_flood_type.csv
-│   │   └── ncei_usa_county_panel_20230222.csv
-│   ├── 1b_outcome_data
-│   │   └── mortality_cs_fips_sex_age_2001_2018.csv
-│   ├── 1c_supportive_datasets
-│   │   └── fips_to_state.csv
-│   ├── map_objects.R
-│   └── objects.R
+│   ├── 1a_death_raw
+│   │   └── mort1959_template.csv
+│   ├── 1b_population_raw
+│   │   ├── Bridged-Race Population Estimates 1990-1995.txt
+│   │   ├── Bridged-Race Population Estimates 2001-2005.txt
+│   │   ├── Bridged-Race Population Estimates 2006-2010.txt
+│   │   ├── Bridged-Race Population Estimates 2011-2015.txt
+│   │   ├── Bridged-Race Population Estimates 2016-2020.txt
+│   │   ├── Single-Race Population Estimates 2020-2022 by State and Single-Year Age_2020-2022.txt
+│   │   ├── co-asr-7079.xlsx
+│   │   └── pe-02.xlsx
+│   └── 1c_icd
+│       ├── icd7.csv
+│       ├── icd8.csv
+│       ├── icd9.csv
+│       └── icd10.csv
 ├── 02_code
-│   ├── 20_functions
-│   │   ├── 01_data_processing_functions.R
-│   │   ├── 02_eda_functions.R
-│   │   ├── 03_model_development_functions.R
-│   │   ├── 04_model_functions.R
-│   │   ├── 05_model_plotting_functions.R
-│   │   └── script_initiate.R
-│   ├── 2a_data_prep
-│   │   ├── a_00_get_county_pop.R
-│   │   ├── a_00_process_nchs_mortality.R
-│   │   ├── a_01_prep_exposure_data.R
-│   │   ├── a_02_create_exposure_variables.R
-│   │   ├── a_03_add_lags_to_floods.R
-│   │   └── load_data.R
-│   ├── 2b_data_exploration
-│   │   ├── b_00_compare_flood_datasets.R
-│   │   ├── b_01_floods_eda.R
-│   │   ├── b_02_flood_eda_maps.R
-│   │   ├── b_03_mortality_eda.R
-│   │   ├── b_04_exposure_histogram.R
-│   │   └── b_05_manuscript_values.R
-│   ├── 2c_models
-│   │   ├── c_00_create_subcause_group_datasets.R
-│   │   ├── c_01_model_comparison.R
-│   │   └── c_02_run_model.R
-│   ├── 2d_model_plotting
-│   │   └── d_01_plot_model_output.R
-│   └── packages_to_load.R
+│   ├── 2a_functions
+│   │   └── 01_data_formatting
+│   │       └── 02_data_processing.R
+│   ├── 2b_data_prep
+│   │   ├── 01_population_estimation.R
+│   │   ├── 02_yearly_summary_without_population.R
+│   │   ├── 03_all_years_summary_with_population.R
+│   │   ├── 04_all_cause_summary.R
+│   │   └── 05_icd_decode.R
+│   └── 2c_data_exploration
+│       └── 01_plot.R
 ├── 03_output
-│   ├── 3a_eda_output
-│   │   ├── maps_flood_exposure_area.jpeg
-│   │   ├── maps_flood_exposure_pop.jpeg
-│   │   ├── maps_flood_type_any_pop_expo.jpeg
-│   │   ├── seasonal_mortality.jpeg
-│   │   └── ts_data.jpeg
-│   ├── 3b_model_output
-│   └── model_comparison_table.csv
-├── 04_tables
-├── 05_figures
-├── 06_literature
-├── 07_drafts
+│   ├── 3a_death_processed
+│   │   ├── summary_1959.rds
+│   │   ├── summary_1960.rds
+│   │   ├── ...
+│   │   └── summary_2022.rds
+│   ├── 3b_population_processed
+│   │   ├── year_1970.rds
+│   │   ├── ...
+│   │   └── year_2022.rds
+│   └── 3c_combined_summary
+│       ├── 01_cause_not_specified
+│       │   ├── summary_1970_1989_with_population.rds
+│       │   └── summary_1970_1989_without_population.rds
+│       └── 02_cause_specified
+│           └── all_causes_summary.rds
+├── 04_figure
+│   └── Summary Plots.pdf
+├── renv
+├── renv.lock
 ├── README.md
-├── create_folder_structure.R
-├── get_inla_to_run.R
-└── template.Rproj
+├── nber_mortality_process_2024.Rproj
+└── workflow_diagram.jpg
 ```
 
 ## Data Availability 

@@ -75,7 +75,7 @@ script_initiate.R
 3b_model_output: .csv of model results 
 
 ## 4. Tables
-Supplmentary tables
+Supplementary tables
 
 ## 5. Figures
 All figures for manuscript and supplement 

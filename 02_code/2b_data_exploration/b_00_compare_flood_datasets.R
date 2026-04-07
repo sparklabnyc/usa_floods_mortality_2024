@@ -4,7 +4,6 @@ rm(list = ls())
 project.folder = paste0(print(here::here()),'/')
 source(paste0(project.folder,'create_folder_structure.R'))
 source(paste0(functions.folder,'script_initiate.R'))
-#census_api_key("9a6713f3a30baf963e6cde34d7dac806df34a151", overwrite = TRUE)
 
 #This code is used to examine floods that are not included in the GFD but are present in the DFO; it does not yield results
 #used in the analysis. 

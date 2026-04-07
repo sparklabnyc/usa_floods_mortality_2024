@@ -4,7 +4,6 @@ rm(list = ls())
 project.folder = paste0(print(here::here()),'/')
 source(paste0(project.folder,'create_folder_structure.R'))
 source(paste0(functions.folder,'script_initiate.R'))
-#census_api_key("9a6713f3a30baf963e6cde34d7dac806df34a151", overwrite = TRUE)
 
 #1.DO NOT RUN in this project: Load and join year-specific monthly population data from Robbie Parks' CDC
 #Monthly Population Inference project. File structure and data are from his project. 

@@ -8,9 +8,9 @@ This dataset and code is used for the paper
 https://www.nature.com/articles/s41591-024-03358-z
 
 ## 1. Data
-1a_exposure_data: flood data from Global Flood Database 
+1a_exposure_data: county-level flood data from Global Flood Database and flood cause type from ('FloodArchive.csv') from Dartmouth Flood Obsevatory
 
-1b_outcome_data: mortality data - only on local computer 
+1b_outcome_data: mortality data - only on local computer. Cause-specific mortality data with geographic information can be requested through the National Center for Health Statistics (NCHS) at https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm
 
 1c_supportive_datasets: files used to help analysis (e.g. population weights, fips-to-state etc.)
 
